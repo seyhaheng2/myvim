@@ -1,4 +1,5 @@
-set guifont=Menlo\ Regular:h20
+"set guifont=Menlo\ Regular:h20
+set guifont=PragmataPro:h23,Essential\ PragmataPro:h23,iosevka:h23
 colorscheme one
 
 if !exists('g:airline_symbols')
@@ -22,9 +23,6 @@ let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
 
-
-
-
 nmap <S-Up> v<Up>
 nmap <S-Down> v<Down>
 nmap <S-Left> v<Left>
@@ -34,11 +32,17 @@ vmap <S-Down> <Down>
 vmap <S-Left> <Left>
 vmap <S-Right> <Right>
 
+"flutter command
+nnoremap <leader>fa :FlutterRun<cr>
+nnoremap <leader>fq :FlutterQuit<cr>
+nnoremap <leader>fr :FlutterHotReload<cr>
+nnoremap <leader>fR :FlutterHotRestart<cr>
+nnoremap <leader>fD :FlutterVisualDebug<cr>
+
 nnoremap ;; :bn<cr>
 nnoremap aa :bp<cr>
 inoremap jj <esc>
 nnoremap <space> za
-nnoremap <C-[> c$
 nnoremap <C-]> c^
 nnoremap gV `[v`]
 nnoremap j gj
@@ -102,7 +106,14 @@ NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'Yggdroot/indentLine'
 NeoBundle 'slashmili/alchemist.vim'
 NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'ruby-matchit'
+
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'matchit.zip'
 NeoBundle 'tomtom/tcomment_vim'
@@ -159,9 +170,14 @@ NeoBundle 'tomtom/checksyntax_vim'
 " js
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'elzr/vim-json'
-NeoBundle 'mxw/vim-jsx'
 NeoBundle 'millermedeiros/vim-esformatter'
 NeoBundle 'marijnh/tern_for_vim'
+
+"flutter
+
+NeoBundle 'dart-lang/dart-vim-plugin'
+NeoBundle 'thosakwe/vim-flutter'
+
 " snipmate
 NeoBundle 'MarcWeber/vim-addon-mw-utils'
 NeoBundle 'tomtom/tlib_vim'
@@ -364,34 +380,3 @@ catch
 endtry
 
 NeoBundleCheck
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
