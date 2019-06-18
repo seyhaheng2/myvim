@@ -32,13 +32,6 @@ vmap <S-Down> <Down>
 vmap <S-Left> <Left>
 vmap <S-Right> <Right>
 
-"flutter command
-nnoremap <leader>fa :FlutterRun<cr>
-nnoremap <leader>fq :FlutterQuit<cr>
-nnoremap <leader>fr :FlutterHotReload<cr>
-nnoremap <leader>fR :FlutterHotRestart<cr>
-nnoremap <leader>fD :FlutterVisualDebug<cr>
-
 nnoremap ;; :bn<cr>
 nnoremap aa :bp<cr>
 inoremap jj <esc>
@@ -200,6 +193,8 @@ NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'tmhedberg/indent-motion'
 NeoBundle 'jordwalke/VimCleanColors'
 NeoBundle 'jordwalke/vim-one'
+NeoBundle 'majutsushi/tagbar'
+
 if !exists('g:one_allow_italics')
   " Italics don't typically render well in terminals
   let g:one_allow_italics = has('gui_running')
@@ -262,6 +257,16 @@ NeoBundle 'mxw/vim-jsx'
 
 
 call neobundle#end()
+
+
+"call FlutterMenu()
+"flutter command
+nnoremap <leader>fa :FlutterRun<cr>
+nnoremap <leader>fq :FlutterQuit<cr>
+nnoremap <leader>fr :FlutterHotReload<cr>
+nnoremap <leader>fR :FlutterHotRestart<cr>
+nnoremap <leader>fD :FlutterVisualDebug<cr>
+
 
 " snippets
 let g:UltiSnipsExpandTrigger="<tab>"
