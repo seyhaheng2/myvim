@@ -11,6 +11,7 @@ set PATH $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
 
 set -x PATH (pwd)/flutter/bin $PATH
+set -x PATH (pwd)/flutter/.pub-cache/bin $PATH
 
 set --export ANDROID $HOME/Library/Android;
 
